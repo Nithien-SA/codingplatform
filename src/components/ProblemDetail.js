@@ -4,7 +4,7 @@ import CodeEditor from './CodeEditor';
 import { challenges } from '../constants/challenges';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3500';
+const API_BASE_URL = 'https://coderb-prv4.onrender.com';
 
 function ProblemDetail() {
   const { id } = useParams();
