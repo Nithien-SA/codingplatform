@@ -109,7 +109,7 @@ function ProblemDetail() {
         // Update problem status to solved in backend
         try {
           const userId = localStorage.getItem('userId');
-          await axios.post(`${API_BASE_URL}/api/update-problem-status`, {
+          await axios.post(`${API_BASE_URL}/api/update-solved`, {
             problemId: challenge.id,
             status: 'solved',
             difficulty: challenge.difficulty
