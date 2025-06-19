@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { challenges } from '../constants/challenges';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'https://coderb-prv4.onrender.com';
 
 const ProblemList = () => {
   const navigate = useNavigate();
