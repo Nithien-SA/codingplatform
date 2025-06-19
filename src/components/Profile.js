@@ -20,7 +20,7 @@ const Profile = ({ userId }) => {
             const controller = new AbortController();
             const timeout = setTimeout(() => controller.abort(), 7000); // 7s timeout
             try {
-                const response = await fetch('http://localhost:5000/api/user-stats', {
+                const response = await fetch('https://coderb-prv4.onrender.com/api/user-stats', {
                     headers: { 'user-id': userId },
                     signal: controller.signal
                 });
@@ -46,7 +46,7 @@ const Profile = ({ userId }) => {
 
     const handleUpdateProfile = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/update-profile', {
+            const response = await fetch('https://coderb-prv4.onrender.com/api/update-profile', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const Profile = ({ userId }) => {
             return;
         }
         try {
-            const response = await fetch('http://localhost:5000/api/change-password', {
+            const response = await fetch('https://coderb-prv4.onrender.com/api/change-password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
