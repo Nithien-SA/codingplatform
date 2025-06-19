@@ -25,7 +25,7 @@ const Auth = () => {
 
         try {
             const endpoint = isLogin ? '/api/validate-user' : '/api/register';
-            const response = await fetch(`http://localhost:5000${endpoint}`, {
+            const response = await fetch(`https://coderb-prv4.onrender.com${endpoint}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
