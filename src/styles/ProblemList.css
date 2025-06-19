@@ -1,0 +1,172 @@
+.stats-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--surface-color);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.water-bottle {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.bottle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.bottle-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 1.2rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    margin-top: 0.5rem;
+}
+
+.bottle-label.easy {
+    color: #22c55e;
+    border-color: #22c55e;
+}
+.bottle-label.medium {
+    color: #facc15;
+    border-color: #facc15;
+}
+.bottle-label.hard {
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.bottle {
+    width: 80px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--glass-border);
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: height 0.5s ease-in-out;
+    border-radius: 0 0 18px 18px;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.progress-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border-radius: 0.7rem;
+    padding: 0.12rem 0.5rem 0.08rem 0.5rem;
+    font-size: 0.95rem;
+    min-width: unset;
+    margin: 0 2px;
+}
+
+.progress-stat-value {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.progress-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: -2px;
+}
+
+.bottle-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    flex: 1;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+}
+
+.stat-card h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 

@@ -1,0 +1,234 @@
+.profile-container {
+    max-width: 700px;
+    margin: 4rem auto 0 auto;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    background: var(--surface-color);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 32px 0 rgba(30,41,59,0.18);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.profile-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 700;
+}
+
+.profile-header .header-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-button, .logout-button, .save-button, .cancel-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.45rem 1.1rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin: 0;
+    min-width: 80px;
+}
+
+.logout-button {
+    background: var(--error-color);
+}
+
+.save-button {
+    background: var(--success-color);
+    margin-right: 0.5rem;
+}
+
+.cancel-button {
+    background: var(--error-color);
+}
+
+.edit-button:hover, .logout-button:hover, .save-button:hover, .cancel-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.profile-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-section {
+    background: rgba(255,255,255,0.04);
+    border-radius: 0.75rem;
+    padding: 1.2rem 1rem 1.7rem 1rem;
+    border: 1px solid var(--glass-border);
+    margin-bottom: 2.2rem;
+}
+
+.profile-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.info-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.info-field label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.edit-field {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.edit-field input {
+    flex: 1;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--glass-border);
+    background: rgba(255,255,255,0.05);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: stretch;
+    margin-bottom: 1.2rem;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.07);
+    padding: 0.8rem 1.1rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--glass-border);
+    min-width: 90px;
+    max-width: 110px;
+    margin: 0.3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-card h3 {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.stat-card p {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.completion-rate {
+    margin-top: 1.2rem;
+    text-align: left;
+    padding-left: 0.2rem;
+}
+
+.completion-rate h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.progress-bar {
+    background: rgba(255,255,255,0.05);
+    height: 1.1rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--glass-border);
+    margin-top: 0.1rem;
+    max-width: 140px;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress-bar span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.recent-activity {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: 0.7rem;
+    padding-left: 0.2rem;
+}
+
+.recent-activity p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        align-items: center;
+    }
+} 
